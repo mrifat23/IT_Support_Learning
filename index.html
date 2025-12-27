@@ -1,1 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IT Support Admin Learning Platform (2025)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="shell" id="shell">
+    <header class="top">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">🛠️</div>
+        <div>
+          <h1>IT Support Admin</h1>
+          <p class="muted">Self-learning platform • 2025</p>
+        </div>
+      </div>
+
+      <div class="topActions">
+        <button class="btn ghost" id="toggleTheme">Toggle theme</button>
+        <button class="btn ghost" id="toggleFocus">Focus mode</button>
+        <button class="btn ghost danger" id="resetAll">Reset</button>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="hero">
+        <div class="heroGlow" aria-hidden="true"></div>
+        <h2>Dashboard</h2>
+        <p class="muted">Track your progress, jump into lessons, and keep learning without overwhelm.</p>
+
+        <div class="heroGrid">
+          <div class="stat">
+            <div class="statTop">
+              <span class="chip">✅ Completed</span>
+              <span class="muted" id="statCompleted">0</span>
+            </div>
+            <div class="bar"><span id="barProgress" style="width:0%"></span></div>
+            <div class="tiny muted"><span id="statPct">0%</span> of lessons done</div>
+          </div>
+
+          <div class="stat">
+            <div class="statTop">
+              <span class="chip green">🔥 Streak</span>
+              <span class="muted" id="statStreak">0 days</span>
+            </div>
+            <div class="tiny muted">Complete at least one lesson step each day to build momentum.</div>
+          </div>
+
+          <div class="stat">
+            <div class="statTop">
+              <span class="chip orange">🔖 Bookmarks</span>
+              <span class="muted" id="statBookmarks">0</span>
+            </div>
+            <div class="tiny muted">Bookmark tricky lessons and revisit later.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panelHead">
+          <h3>Find a lesson</h3>
+          <div class="searchWrap">
+            <input class="input" id="search" placeholder="Search lessons (e.g., SLA, Tier 2, cloud, troubleshooting)..." />
+            <button class="btn ghost" id="clearSearch">✕</button>
+          </div>
+        </div>
+        <div class="grid" id="searchResults"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panelHead">
+          <h3>Modules</h3>
+          <p class="muted tiny">Click a lesson to open the interactive learning page.</p>
+        </div>
+        <div class="moduleList" id="moduleList"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="muted">Built on GitHub Pages • Progress stored locally</span>
+    </footer>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
 
