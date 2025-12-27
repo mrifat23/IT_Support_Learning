@@ -1,1 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lesson</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app" id="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand compact">
+        <div class="logo" aria-hidden="true">📘</div>
+        <div>
+          <h1 id="lessonTitleSide">Lesson</h1>
+          <p class="muted" id="lessonMetaSide">—</p>
+        </div>
+      </div>
+
+      <div class="quick">
+        <button class="btn primary" id="btnComplete">⬜ Mark lesson complete</button>
+        <div class="tiny muted">Saved in your browser.</div>
+      </div>
+
+      <div class="row">
+        <a class="btn ghost" href="index.html">← Dashboard</a>
+        <button class="btn ghost" id="bookmarkBtn">🔖 Bookmark</button>
+      </div>
+
+      <div class="searchWrap" style="margin-top:12px;">
+        <input id="search" class="input" placeholder="Search within this lesson..." />
+        <button class="btn ghost" id="clearSearch">✕</button>
+      </div>
+
+      <nav class="nav" id="nav"></nav>
+
+      <div class="sidebarFooter">
+        <div class="pill"><span class="dot"></span><span id="modeText">Reading mode</span></div>
+        <div class="row">
+          <button class="btn ghost" id="toggleTheme">Toggle theme</button>
+          <button class="btn ghost" id="toggleFocus">Focus mode</button>
+          <button class="btn ghost" id="printBtn">Print / Save PDF</button>
+        </div>
+        <div class="tiny muted">Tip: Use collapsibles to stay relaxed 😌</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="crumbs" id="crumbs">Overview</div>
+        <div class="row">
+          <button class="btn ghost danger" id="resetLesson">Reset lesson</button>
+        </div>
+      </header>
+
+      <section class="page" id="page">
+        <section class="hero searchable" id="hero" data-title="Lesson overview">
+          <div class="heroGlow" aria-hidden="true"></div>
+          <h2 id="lessonTitle">Lesson</h2>
+          <p class="subtitle" id="lessonSubtitle">—</p>
+
+          <div class="heroGrid">
+            <div class="stat">
+              <div class="statTop"><span class="chip">⏱️ Time</span><span class="muted" id="lessonTime">—</span></div>
+              <div class="bar"><span id="lessonBar" style="width:0%"></span></div>
+              <div class="tiny muted"><span id="lessonProgressText">0%</span> lesson steps done</div>
+            </div>
+            <div class="stat">
+              <div class="statTop"><span class="chip green">🧠 Focus</span><span class="muted">Cards + collapsibles</span></div>
+              <div class="tiny muted">No walls of text. You control the depth.</div>
+            </div>
+            <div class="stat">
+              <div class="statTop"><span class="chip orange">🎯 Outcome</span><span class="muted">Job skills</span></div>
+              <div class="tiny muted">Tickets + workflow + documentation habits.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sections injected by JS -->
+        <div id="lessonContent"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
 
